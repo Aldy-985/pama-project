@@ -34,7 +34,7 @@ class UserController extends Controller
             'name'  => $request->name,
             'username'  => $request->username,
             'email' => $request->email,
-            'password' => bcrypt($request->input('password'))
+            'password' => ($request->input('password'))
         ]);
 
         return redirect()->back();

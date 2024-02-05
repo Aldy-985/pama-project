@@ -7,7 +7,7 @@
         <script>
             document.addEventListener('DOMContentLoaded', function() {
                 Swal.fire({
-                    title: 'Sweet Success!',
+                    title: 'Berhasil Dipinjam',
                     text: "{{ session('sweet-success') }}",
                     icon: 'success',
                     confirmButtonColor: '#28a745',
@@ -23,7 +23,7 @@
                     ->where('room_id', $rooms->id)
                     ->first();
                 // Assuming you want to check the first reservation
-                $today = \Carbon\Carbon::now()->format('Y-m-d');
+                $today = \Carbon\Carbon::now()->timezone('Asia/Makassar')->format('Y-m-d');
 
             @endphp
             <div class="col-xl-3">
